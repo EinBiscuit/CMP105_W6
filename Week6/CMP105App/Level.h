@@ -2,6 +2,8 @@
 
 #include <SFML/Graphics.hpp>
 #include "Framework/Input.h"
+#include "BauncyBaul.h"
+#include "Ball2.h"
 #include <string.h>
 #include <iostream>
 
@@ -25,4 +27,9 @@ private:
 	Input* input;
 
 	// More level variables
+
+	sf::Texture baul;
+	BauncyBaul bauncy;
+
+	Ball2 tailball;
 };

@@ -6,7 +6,18 @@ Level::Level(sf::RenderWindow* hwnd, Input* in)
 	input = in;
 
 	// initialise game objects
+	baul.loadFromFile("gfx/Beach_Ball.png");
 
+	bauncy.setInput(input);
+	bauncy.setSize(sf::Vector2f(100, 100));
+	bauncy.setPosition(300,100);
+	bauncy.setTexture(&baul);
+
+	tailball.setInput(input);
+	tailball.setSize(sf::Vector2f(100, 100));
+	tailball.setOrigin(50, 50);
+	tailball.setPosition(300, 100);
+	tailball.setTexture(&baul);
 }
 
 Level::~Level()
@@ -17,20 +28,23 @@ Level::~Level()
 // handle user input
 void Level::handleInput(float dt)
 {
-
+	bauncy.handleInput(dt);
+	tailball.handleInput(dt);
 }
 
 // Update game objects
 void Level::update(float dt)
 {
-
+	bauncy.update(dt);
+	tailball.update(dt);
 }
 
 // Render level
 void Level::render()
 {
 	beginDraw();
-
+	window->draw(bauncy);
+	window->draw(tailball);
 	endDraw();
 }
 
