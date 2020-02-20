@@ -18,6 +18,12 @@ Level::Level(sf::RenderWindow* hwnd, Input* in)
 	tailball.setOrigin(50, 50);
 	tailball.setPosition(300, 100);
 	tailball.setTexture(&baul);
+
+	yeet.setInput(input);
+	yeet.setSize(sf::Vector2f(100, 100));
+	yeet.setOrigin(50, 50);
+	yeet.setPosition(300, 100);
+	yeet.setTexture(&baul);
 }
 
 Level::~Level()
@@ -30,6 +36,7 @@ void Level::handleInput(float dt)
 {
 	bauncy.handleInput(dt);
 	tailball.handleInput(dt);
+	yeet.handleInput(dt);
 }
 
 // Update game objects
@@ -37,6 +44,7 @@ void Level::update(float dt)
 {
 	bauncy.update(dt);
 	tailball.update(dt);
+	yeet.update(dt);
 }
 
 // Render level
@@ -45,6 +53,7 @@ void Level::render()
 	beginDraw();
 	window->draw(bauncy);
 	window->draw(tailball);
+	window->draw(yeet);
 	endDraw();
 }
 

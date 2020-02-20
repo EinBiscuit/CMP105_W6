@@ -4,6 +4,7 @@
 #include "Framework/Input.h"
 #include "BauncyBaul.h"
 #include "Ball2.h"
+#include "Ball3.h"
 #include <string.h>
 #include <iostream>
 
@@ -30,6 +31,6 @@ private:
 
 	sf::Texture baul;
 	BauncyBaul bauncy;
-
 	Ball2 tailball;
+	Ball3 yeet;
 };

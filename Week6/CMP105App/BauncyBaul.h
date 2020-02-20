@@ -8,10 +8,11 @@ public:
 	sf::Vector2f bounce = sf::Vector2f(0, -5.f);
 	float scale;
 
-	bool grounded =false;
+	bool grounded = false;
 
 	BauncyBaul();
 	void handleInput(float dt);
 	void update(float dt);
+	void setWindow(sf::Window* W) { window = W; };
 };
 

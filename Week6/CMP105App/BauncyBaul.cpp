@@ -37,4 +37,9 @@ void BauncyBaul::update(float dt)
 		velocity= sf::Vector2f(velocity.x,-velocity.y)*0.6f;
 		grounded = true;
 	}
+
+	if (getposition)
+	{
+
+	}
 }

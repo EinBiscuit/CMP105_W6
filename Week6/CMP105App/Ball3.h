@@ -1,16 +1,17 @@
 #pragma once
-#include "Framework/GameObject.h"
+
 #include "BauncyBaul.h"
+
 class Ball3 :
-	public GameObject, public BauncyBaul
+   public BauncyBaul
 {
 public:
 	sf::Window* window;
-
-
+	sf::Vector2f direction;
+	bool hold = false;
 
 	Ball3();
-	 void handleInput()
-
+	void handleInput(float dt);
+	
 };
 
